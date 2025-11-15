@@ -10,7 +10,7 @@
 
 /* globals $ */
 
-const filteredIds = [
+const artists = [
   489974, // KAI
   360713, // AlexM
   705542, // koh
@@ -26,9 +26,10 @@ const quoteBackground = "#8a8a8a";
 (function () {
   "use strict";
 
-  filteredIds.forEach((id) => {
+  artists.forEach((id) => {
     $(`a.topic-card__author-name[href='/users/${id}']`)
-      .closest("section.topic-card")?.remove();
+      .closest("section.topic-card")
+      ?.remove();
   });
 
   // ignored
