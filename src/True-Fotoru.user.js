@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         True Fotoru (beta)
 // @namespace    http://tampermonkey.net/
-// @version      0.4.8
-// @description  Fotoru imgflood filter & img resizer & css
+// @version      0.4.9
+// @description  Fotoru flood filter & img resizer & css
 // @author       _andy_
 // @match        https://foto.ru/*
 // @grant        GM_addStyle
@@ -10,7 +10,7 @@
 
 /* globals $ */
 
-const arts = [
+const filteredIds = [
   489974, // KAI
   360713, // AlexM
   705542, // koh
@@ -26,10 +26,9 @@ const quoteBackground = "#8a8a8a";
 (function () {
   "use strict";
 
-  arts.forEach((id) => {
+  filteredIds.forEach((id) => {
     $(`a.topic-card__author-name[href='/users/${id}']`)
-      .closest("section.topic-card")
-      ?.remove();
+      .closest("section.topic-card")?.remove();
   });
 
   // ignored
@@ -87,7 +86,9 @@ const quoteBackground = "#8a8a8a";
            background: ${textColor} !important;
         }
 
-        .form__input {
+        .form__input,
+        .chat-message__text
+        {
            color: ${inputTextColor} !important;
         }
     `;
