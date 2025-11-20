@@ -2,7 +2,7 @@
 // @name         True Fotoru (beta)
 // @namespace    http://tampermonkey.net/
 // @version      0.5.5
-// @description  Fotoru flood filter & img resizer & css
+// @description  Fotoru flood filter & img resize & css
 // @author       _andy_
 // @match        https://foto.ru/*
 // @grant        GM_addStyle
@@ -46,7 +46,7 @@ const quoteBackground = "#8a8a8a";
   });
 
   const theme = `
-      body 
+      body
       {
         background: ${bodyBackground} !important;
         color: ${textColor} !important;
