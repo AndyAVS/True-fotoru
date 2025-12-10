@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         True Fotoru (beta)
 // @namespace    http://tampermonkey.net/
-// @version      0.5.5
+// @version      0.5.6
 // @description  Fotoru flood filter & img resize & css
 // @author       _andy_
 // @match        https://foto.ru/*
@@ -92,6 +92,7 @@ const quoteBackground = "#8a8a8a";
       {
         max-width: 1024px !important;
         max-height: 768px !important;
+        object-fit: scale-down;
         border-radius: 10px
       }
 
