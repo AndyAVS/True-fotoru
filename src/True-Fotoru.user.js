@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         True Fotoru (beta)
 // @namespace    http://tampermonkey.net/
-// @version      0.5.6
+// @version      0.5.7
 // @description  Fotoru flood filter & img resize & css
 // @author       _andy_
 // @match        https://foto.ru/*
@@ -102,7 +102,9 @@ const quoteBackground = "#8a8a8a";
       }
 
       .form__input,
-      .chat-message__text
+      .chat-message__text,
+      .dialogs-item
+
       {
         color: ${inputTextColor} !important;
       }
