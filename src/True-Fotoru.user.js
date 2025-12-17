@@ -104,7 +104,6 @@ const quoteBackground = "#8a8a8a";
       .form__input,
       .chat-message__text,
       .dialogs-item
-
       {
         color: ${inputTextColor} !important;
       }
