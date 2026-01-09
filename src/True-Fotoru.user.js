@@ -90,10 +90,10 @@ const quoteBackground = "#8a8a8a";
 
       div.post-text-js img.lazy 
       {
-        max-width: 1024px !important;
         max-height: 768px !important;
-        object-fit: scale-down;
-        border-radius: 10px
+        width: auto !important;
+        height: auto !important;
+        border-radius: 10px;
       }
 
       .reaction-button::before 
