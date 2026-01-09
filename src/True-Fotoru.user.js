@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         True Fotoru (beta)
 // @namespace    http://tampermonkey.net/
-// @version      0.5.7
+// @version      0.5.8
 // @description  Fotoru flood filter & img resize & css
 // @author       _andy_
 // @match        https://foto.ru/*
@@ -40,7 +40,7 @@ const quoteBackground = "#8a8a8a";
     el.classList.remove("ignored-post-css");
   });
 
-  // remove disabled artifacts
+  // remove "disabled" artifacts
   document.querySelectorAll("a.reaction-button").forEach((el) => {
     el.removeAttribute("disabled");
   });
